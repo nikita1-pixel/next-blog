@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./Pagination.module.css";
-import Link from "next/link";
+
 
 const Pagination = () => {
     return (
         <div className={styles.container}>
-            Navbar
+            <button className={styles.button}></button>
+            <button className={styles.button}></button>
         </div>
     )
 }
