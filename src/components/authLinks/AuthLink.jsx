@@ -8,10 +8,10 @@ const AuthLink = () => {
 
     const [open, setOpen] = useState(false);
 //temporary
-    const status = "not-authenticated";
+    const status = "authenticated";
     return <>
-    { status === "not-authenticated" ? (
-            <a href="/Login" className="styles.link">Login</a>
+    { status === "notauthenticated" ? (
+            <a href="/login" className="styles.link">Login</a>
      ) : (
         //these are fragments<></>
         <>
@@ -32,7 +32,7 @@ const AuthLink = () => {
             <a href="#posts" className="styles.links" >Posts</a>
             <a href="#stories" className="styles.links" >Stories</a>
             { status === "not-authenticated" ? (
-            <a href="/Login">Login</a>
+            <a href="/login">Login</a>
      ) : (
         //these are fragments<></>
         <>

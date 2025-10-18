@@ -4,6 +4,7 @@ import Link from "next/link";
 import AuthLink from "../authLinks/AuthLink";
 // import ThemeToggle from "../themeToggle/ThemeToggle";
 
+
 const Navbar = () => {
     return (
         <div className={styles.container}>
@@ -15,7 +16,7 @@ const Navbar = () => {
             </div>
             <div className={styles.logo}>MINDSCAPES</div>
             <div className={styles.links}>
-                {/* <ThemeToggle />  */}
+                {/* <ThemeToggle /> */}
                 <a href="#home" className="styles.links" >Home</a>
                 <a href="#posts" className="styles.links" >Posts</a>
                 <a href="#stories" className="styles.links" >Stories</a>
