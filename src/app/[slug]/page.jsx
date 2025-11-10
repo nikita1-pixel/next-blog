@@ -4,14 +4,10 @@ import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
-
-
 const SinglePage =  () => {
 
 //http://localhost:3001/hello 
 //localhost page name
-
-
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>

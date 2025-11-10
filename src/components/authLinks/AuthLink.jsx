@@ -28,16 +28,17 @@ const AuthLink = () => {
 
     {open && (
         <div className="styles.responsiveMenu">
-            <a href="#home" className="styles.links" >Home</a>
-            <a href="#posts" className="styles.links" >Posts</a>
-            <a href="#stories" className="styles.links" >Stories</a>
+            <a href="/home" className="styles.links" >Home</a>
+            <a href="/posts" className="styles.links" >Posts</a>
+            <a href="/stories" className="styles.links" >Stories</a>
             { status === "not-authenticated" ? (
             <a href="/login">Login</a>
      ) : (
         //these are fragments<></>
         <>
         <a href="/write">Write</a>
-        <span className="styles.link">Logout</span>
+        <span className="styles.link"><button>Logout
+            </button></span>
         </>
      )
     }

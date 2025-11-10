@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './Comments.module.css';
+import styles from './comments.module.css';
 
 const Comments = () => {
 
