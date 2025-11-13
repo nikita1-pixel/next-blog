@@ -1,19 +1,24 @@
-
 import Link from "next/link";
 import React from "react";
 import styles from "./menuCategories.module.css";
 
-const MenuCategories = () => {
+const MenuCategories = ({ categories }) => {
+  if (!categories || categories.length === 0) {
+    return <div>No categories available.</div>;
+  }
+
   return (
-   <div className={styles.categoryList}>
-                <a href="/blog?cat" className={`${styles.categoryItem} ${styles.style}`}>Style</a>
-                <a href="/blog?cat" className={`${styles.categoryItem} ${styles.fashion}`}>Fashion</a>
-                <a href="/blog?cat" className={`${styles.categoryItem} ${styles.food}`}>Food</a>
-                <a href="/blog?cat" className={`${styles.categoryItem} ${styles.travel}`}>Travel</a>
-                <a href="/blog?cat" className={`${styles.categoryItem} ${styles.culture}`}>Culture</a>
-                <a href="/blog?cat=style" className={`${styles.categoryItem} ${styles.coding}`}>Coding</a>
-            </div>
+    <div className={styles.categoryList}>
+      {categories.map(cat => (
+        <a 
+          key={cat.id}
+          href={`/blog?cat=${cat.slug}`} 
+          className={`${styles.categoryItem} ${styles[cat.slug]}`}
+        >
+          {cat.title}
+        </a>
+      ))}
+    </div>
   );
 };
-
 export default MenuCategories;

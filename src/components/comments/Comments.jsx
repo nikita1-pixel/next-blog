@@ -18,7 +18,7 @@ const Comments = () => {
         <div className={styles.comments}> 
             <div className={styles.comment}>
                 <div className={styles.user}>
-                    <img src="/p1.jpeg" alt='' width={50} height={50} className={styles.image}/>
+                    <image src="/p1.jpeg" alt='' width={50} height={50} className={styles.image}/>
                     <div className={styles.userInfo}>
                         <span className={styles.username}>USERNAME</span>
                         <span className={styles.date}>DATE</span>

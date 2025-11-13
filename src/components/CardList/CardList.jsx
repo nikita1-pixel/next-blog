@@ -11,8 +11,7 @@ const CardList = () => {
            <h1 className="stles.title">Recent Posts</h1>
            <div className="styles.posts">
             <Card/>
-            <Card/>
-            <Card/>
+            
            </div>
            <Pagination/>
         </div>

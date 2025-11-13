@@ -5,17 +5,24 @@ import CategoryList from "@/components/categoryList/CategoryList";
 import CardList from "@/components/cardList/CardList";
 import Menu from "@/components/Menu/Menu";
 
-export default function Home({ searchParams }) {
-  const page = parseInt(searchParams.page) || 1;
+export default async function Home({ searchParams }) { // MUST be async
+    
+    // 1. Await searchParams to resolve the promise (safe even if it's not a promise)
+    const params = await searchParams;
+    
+    // 2. Define the 'page' variable using the resolved params
+    const page = parseInt(params?.page) || 1; 
 
-  return (
-    <div className={styles.container}>
-      <Featured />
-      <CategoryList />
-      <div className={styles.content}>
-        <CardList page={page}/>
-        <Menu />
-      </div>
-    </div>
-  );
+    // ... rest of your component code ...
+
+    return (
+        <div className={styles.container}>
+            <Featured />
+            <CategoryList />
+            <div className={styles.content}>
+                <CardList page={page}/> 
+                <Menu />
+            </div>
+        </div>
+    );
 }
